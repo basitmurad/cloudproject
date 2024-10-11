@@ -26,7 +26,7 @@ export default function Header() {
     },[location.search])
 
     return (
-        <header className='bg-blue-400 shadow-md'>
+        <header className='bg-orange-400 shadow-md'>
             <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
                 <Link to='/'>
                     <h1 className='font-blod text-sm sm:text-xl flex flex-wrap'>
@@ -34,7 +34,7 @@ export default function Header() {
                     </h1>
                 </Link>
 
-                <form onSubmit={handelSubmit} className='bg-blue-800 p-3 rounded-lg flex items-center'>
+                <form onSubmit={handelSubmit} className='bg-orange-800 p-3 rounded-lg flex items-center'>
                     <input
                         type="text"
                         placeholder='Search'
@@ -43,7 +43,7 @@ export default function Header() {
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
                     <button>
-                        <FaSearch className='text-slate-300' />
+                        <FaSearch className='text-black-300' />
                     </button>
                 </form>
 
@@ -52,7 +52,7 @@ export default function Header() {
                         <li className='hidden sm:inline text-slate-700 hover:underline' >Home</li>
                     </Link>
                     <Link to='/about'>
-                        <li className='hidden sm:inline text-slate-700 hover:underline'>About</li>
+                        <li className='hidden sm:inline text-red-700 hover:underline'>About</li>
                     </Link>
                     <Link to='/profile'>
                         {currentUser ? (
