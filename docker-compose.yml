@@ -1,0 +1,31 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./api:/app
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - mongo
+
+  frontend:
+    build:
+      context: ./client
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

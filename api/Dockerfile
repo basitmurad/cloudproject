@@ -1,11 +1,20 @@
-FROM node:18-bookworm-slim
+# Use an official Node.js runtime as a parent image
+FROM node:18
 
+# Set the working directory in the container
 WORKDIR /app
 
+# Copy the package.json and package-lock.json files
 COPY package*.json ./
 
-RUN npm ci
+# Install dependencies
+RUN npm install
 
+# Copy the rest of the application code
 COPY . .
 
-CMD ["node", "index.js"]  # Adjust based on your entry point
+# Expose the port the app runs on
+EXPOSE 5000
+
+# Command to start the app
+CMD ["npm", "start"]

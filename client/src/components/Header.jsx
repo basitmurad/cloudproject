@@ -26,7 +26,7 @@ export default function Header() {
     },[location.search])
 
     return (
-        <header className='bg-red-400 shadow-md'>
+        <header className='bg-blue-400 shadow-md'>
             <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
                 <Link to='/'>
                     <h1 className='font-blod text-sm sm:text-xl flex flex-wrap'>
@@ -34,7 +34,7 @@ export default function Header() {
                     </h1>
                 </Link>
 
-                <form onSubmit={handelSubmit} className='bg-red-800 p-3 rounded-lg flex items-center'>
+                <form onSubmit={handelSubmit} className='bg-blue-800 p-3 rounded-lg flex items-center'>
                     <input
                         type="text"
                         placeholder='Search'
