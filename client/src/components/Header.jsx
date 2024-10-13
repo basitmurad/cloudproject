@@ -93,7 +93,7 @@ export default function Header() {
     }, [location.search]);
 
     return (
-        <header className='bg-yellow-400 shadow-md'>
+        <header className='bg-red-400 shadow-md'>
             <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
                 <Link to='/'>
                     <h1 className='font-bold text-sm sm:text-xl flex flex-wrap text-white'>
@@ -101,7 +101,7 @@ export default function Header() {
                     </h1>
                 </Link>
 
-                <form onSubmit={handelSubmit} className='bg-yellow-600 p-3 rounded-lg flex items-center'>
+                <form onSubmit={handelSubmit} className='bg-red-600 p-3 rounded-lg flex items-center'>
                     <input
                         type="text"
                         placeholder='Search'
@@ -124,7 +124,7 @@ export default function Header() {
                     <Link to='/profile'>
                         {currentUser ? (
                             <img className='rounded-full h-7 w-7 object-cover' src={currentUser.avatar} alt="profile image" />
-                        ) : <li className='text-white hover:underline'>Sign in</li>}
+                        ) : <li className='text-red hover:underline'>Sign in</li>}
                     </Link>
                 </ul>
             </div>
